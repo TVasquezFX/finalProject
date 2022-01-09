@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+        <!--SEO Features-->
+        <title>Alert </title>
+        <meta property="og:description" content="">
+        <meta name="description" content="">
+
+	</head>
+	<body class="text-center">
+
+
+			{{#unless logged_in}}
+		<header class ="header hpadding">
+                        <h1>Missing Animals</h1>
+                        <p> Bring Your Lost Animal Home!</p>
+      				</header>
+
+		{{/unless}}
+	
+			{{#unless logged_in}}
+			<header id="headerLogin" >	
+		<div class="signLogin">
+				<a class="signupL" href="/users/sign-in">Sign In</a>
+				&#183;
+				<a class="signupL" href="/users/new">Sign Up</a>
+				</div>
+		</header>	
+
+			{{/unless}}
+			{{#if logged_in}}
+			<header id="headerLogin">
+			    <div class="navbar navbar-static-top">
+			      <div class="container"> 
+			        <div class="navbar-header">
+			          <a class="navbar-brand" href="#">Hello, {{username}}</a>
+			        </div>
+			        <ul class="nav navbar-nav navbar-right">
+			        	<li><a href="/users/sign-in" id="menu">Home</a></li>
+
+			            <li><a href="/pawpost" >Post Paws</a></li>
+
+			            <li><a href="/users/sign-out" id="menu">Sign Out</a></li>
+			          </ul>
+			        <header class ="header hpadding">
+                        <h1>Alert</h1>
+                        <p>Bring Your Lost Animals Home</p>
+                        <hr>
+      				</header>
+			          
+			        </div>
+			      </div>
+			    </div>
+			    </header>
+
+
+
+			{{/if}}
+
+           
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+
+		{{{ body }}}
+
+		<div class="footer text-center center-block">
+      			
+                <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+		</div>
+		  
+	</body>
+</html>

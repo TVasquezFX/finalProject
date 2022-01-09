@@ -1,0 +1,23 @@
+{{#if logged_in}}
+
+<div class="subheading text-center">
+<h3 class="text-center">Below are our recently lost animals. Please help us find them. Click the read more button to contact owner if you have found one of these dank animals.</h3> 
+</div>
+		<div class="container">
+		<div class="row text-center" id ="holder">
+		    {{#each crimes}}
+		        <div class="col-sm-6 col-md-4">
+		        <div id="thumbnail" class ="thumbnail">
+		        <img src="{{photo}}" id="thumbimg">
+			        <div class = "caption">
+			        <h2>{{name}}</h2>
+			        <h3>{{date}}</h3>
+			        <p>{{case}}</p>
+			        <p><a href="/readmore/{{name}}"><button class="btn btn-default">Read More</button></a></p>
+			        </div>
+			    </div>
+			    </div>
+		    {{/each}}
+		</div>
+		</div>
+{{/if}}
